@@ -5,7 +5,7 @@ import HeaderIcons from './icons.js'
 import HeaderTextOptions from './options.js';
 
 const HeaderContainer = styled.header`
-background-color: antiquewhite;
+background-color: #a9a9a9;
 display: flex;
 justify-content: center;
 `

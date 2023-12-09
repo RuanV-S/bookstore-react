@@ -1,23 +1,42 @@
 import styled from 'styled-components'
-
+import { livros } from "./dblastUpdates"
 const Title = styled.h2`    
-width: 100%;
-padding: 20px 0;
+padding: 10px 0;
 color: #FFF;
-font-size: 30px;
+font-size: 36px;
 text-align: center;
-margin: 0;
 `
+
 
 const LastUpdate = styled.section`
     display: flex;   
     align-items: center;
+    flex-direction: column;
+    background-color: #cf2; 
 `
 
-function LatestBook () {
+const LastUpdateConteiner = styled.div`
+display: grid;
+grid-template-columns: auto auto auto;
+width: 100%;
+justify-content: center;
+`
+
+const LastUpdateImage = styled.img`
+cursor: pointer;
+`
+
+function LatestBook() {
     return (
         <LastUpdate>
-            <Title>Ultimos lançamentos.</Title>
+            <Title>Últimos Lançamentos.</Title>
+            <LastUpdateConteiner>
+                {
+                    livros.map((l) => (
+                        <LastUpdateImage src={l.src} alt={l.name}></LastUpdateImage>
+                    ))
+                }
+            </LastUpdateConteiner>
         </LastUpdate>
     )
 }
