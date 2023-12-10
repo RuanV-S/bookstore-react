@@ -2,12 +2,11 @@
 import { useState } from "react"
 import Input from "../Input/index"
 import styled from "styled-components"
-import { livros } from "./dbSearch"
-
+import { livros } from "./database"
 
 const SearchContainer = styled.section`
 text-align: center;
-padding: 85px 0;
+padding: 100px 0;
 `
 
 const Title = styled.h2`
@@ -23,15 +22,17 @@ margin-bottom: 40px;
 
 const BookCase = styled.div`
 display: grid;
-grid-template-columns: auto auto auto;
+justify-content: center;
+grid-template-columns: auto auto auto auto;
 
 `
 const Book = styled.div`
-    font-size: 16px;
-          
    
 `
-
+const BookName = styled.p`
+font-size: 16px;   
+color: ${props => props.cor || '#A20' } // Utilizando props    
+`
 function Search() {
     const [textSearch, setTextSearch] = useState([])
 
@@ -49,9 +50,10 @@ function Search() {
             <BookCase>
 
                 {textSearch.map((search) => (
-                    <Book><p>{search.nome}</p>
-
-                        <img src={search.src} alt={search.nome}></img></Book>
+                    <Book>
+                        <BookName cor="#000">{search.nome}</BookName>
+                        <img src={search.src} alt={search.nome} onMouseEnter={() => console.log('Mouse por cima')}></img>
+                    </Book>
                 ))}
             </BookCase>
 

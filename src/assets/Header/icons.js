@@ -12,6 +12,7 @@ const Icone = styled.li`
 margin-right: 30px;
 width: 25px;
 list-style: none;
+cursor: pointer;
 `
 
 function HeaderIcons() {

@@ -8,19 +8,18 @@ font-size: 20px;
 
 const LogoImage = styled.img`
     margin-right: 10px;
+    
 `
 
 const LogoText = styled.p`
-text-align: center;
-margin-top: 30px
+margin-top: 30px;
 `
 
 function Logo() {
     return (
         <LogoContainer>
             <LogoImage src={logo} alt='logotipo-storage-book'></LogoImage>
-            <LogoText><strong>Trio</strong>Book</LogoText>
-           
+            <LogoText><strong>Trio</strong>Book</LogoText>           
         </LogoContainer>
         
         )

@@ -1,5 +1,3 @@
-
-
 import styled from 'styled-components';
 const textOptions = ["CATEGORIAS", "FAVORITOS", "MINHA ESTANTE"]
 
@@ -18,7 +16,6 @@ const Option = styled.li`
 display: flex;
 padding: 0 5px;
 `
-
 function HeaderTextOptions() {
   return (
     <OptionsComponent>

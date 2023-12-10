@@ -9,7 +9,6 @@ background-color: #a9a9a9;
 display: flex;
 justify-content: center;
 `
-
 function Header() {
     return (
         <HeaderContainer>
