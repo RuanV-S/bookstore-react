@@ -6,7 +6,7 @@ Este projeto visa criar uma aplicação de simulação de banco de dados para ar
 ## Instruções de Instalação
 É necessário ter o  [Node](https://nodejs.org/en), instalado em sua maquina, para conseguir compilar e executar o projeto.
 
-**Clonar o Repositório:**  `git clone https://github.com/RuanV-S/bookstore`
+**Clonar o Repositório:**  `git clone https://github.com/RuanV-S/bookstore-react`
 
 **Instalar Dependências:**  `npm install`
 
