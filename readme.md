@@ -1,12 +1,12 @@
 # (StoreBook) Landing Page em React 
 ### Descrição do Projeto
-Este projeto visa criar uma aplicação de simulação de banco de dados para armazenar informações sobre livros e permitir aos usuários realizar buscas. A principal funcionalidade é a capacidade de procurar por livros com base em termos digitados no campo de busca, alem da aplicação oferece duas funcionalidades distintas de Últimos e Recomendações de Livro.
+Este projeto visa criar uma aplicação de simulação de banco de dados para armazenar informações sobre livros e permitir aos usuários realizar buscas. A principal funcionalidade é a capacidade de procurar por livros com base em termos digitados no campo de busca, alem da aplicação oferece duas funcionalidades distintas de Últimos Lançamentos e Recomendações de Livro.
 ## Imagem do projeto
 ![Landing Page](https://i.imgur.com/1OdVNHM.png)
 ## Instruções de Instalação
 É necessário ter o  [Node](https://nodejs.org/en), instalado em sua maquina, para conseguir compilar e executar o projeto.
 
-**Clonar o Repositório:**  `git clone https://github.com/RuanV-S/bookstore-react`
+**Clonar o Repositório:**  `git clone https://github.com/RuanV-S/bookstore-react.git`
 
 **Instalar Dependências:**  `npm install`
 
