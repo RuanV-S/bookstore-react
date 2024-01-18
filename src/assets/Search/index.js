@@ -1,25 +1,25 @@
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Input from "../Input/index"
 import styled from "styled-components"
-import { livros } from "./database"
+import { livros } from "../LatestBooks/database"
+//import { getBook } from "../../service/book"
 
 const SearchContainer = styled.section`
 text-align: center;
 padding: 100px 0;
+width: 100%;
+height: 100%;
 `
-
 const Title = styled.h2`
 font-size: 36px;
 text-align: center;
 `
-
 const SubTitle = styled.h3`
 font-size: 16px;
 font-weight: 500px;
 margin-bottom: 40px;
 `
-
 const BookCase = styled.div`
 display: grid;
 justify-content: center;
@@ -35,6 +35,12 @@ color: ${props => props.cor || '#A20' } // Utilizando props
 `
 function Search() {
     const [textSearch, setTextSearch] = useState([])
+   // const [ books, setBooks] = useState([])
+
+    // useEffect(() => {
+    //    const booksInApi = getBook()
+    //    setBooks(booksInApi)
+    // }, [])
 
     return (
         <SearchContainer>
@@ -43,7 +49,7 @@ function Search() {
             <Input placeholder="Escreva sua próxima leitura"
                 onBlur={ev => {
                     const userText = ev.target.value
-                    const resultSearch = livros.filter(livro => livro.nome.includes(userText))
+                    const resultSearch = livros.filter(books=> books.nome.includes(userText))
                     setTextSearch(resultSearch)
                 }}
             />
