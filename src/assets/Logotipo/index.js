@@ -4,11 +4,13 @@ import logo from '../../imagens/logo.svg'
 const LogoContainer = styled.div`
 display: flex;
 font-size: 20px;
+text-decoration: none;
+  color: black;
+  
 `
 
 const LogoImage = styled.img`
-    margin-right: 10px;
-    
+    margin-right: 5px;    
 `
 
 const LogoText = styled.p`

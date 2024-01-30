@@ -9,8 +9,5 @@ export const livros = [
     },
     {
         nome: "Programação POO", id: 2, src: livro
-    },  
-    
-    
-    
+    },     
 ]

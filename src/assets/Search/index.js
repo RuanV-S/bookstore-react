@@ -3,7 +3,8 @@ import { useEffect, useState } from "react"
 import Input from "../Input/index"
 import styled from "styled-components"
 import { getBook } from "../../service/book"
-
+import imageBook from '../../imagens/livro.png'
+import { postBookmarks } from "../../service/bookmarks"
 const SearchContainer = styled.section`
 text-align: center;
 padding: 100px 0;
@@ -44,8 +45,11 @@ function Search() {
     async function fetchBooks() {
         const booksInApi = await getBook()        
         setBooks(booksInApi)
-    }
-
+    }  
+  async function insertBookmarks(id) {
+    await postBookmarks(id)
+    alert(`Livro de id:${id} inserido!`)
+}
     return (
         <SearchContainer>
             <Title>Já sabe por onde começar?</Title>
@@ -58,10 +62,10 @@ function Search() {
                 }}
             />
             <BookCase>
-                {textSearch.map((search) => (
-                    <Book>
-                        <BookName cor="#000">{search.name}</BookName>
-                        <img src={search.src} alt={search.name} onMouseEnter={() => console.log('Mouse por cima')}></img>
+                {textSearch.map((search, index) => (              
+                    <Book key={index} onClick={() => insertBookmarks(search.id)}>
+                        <BookName>{search.name}</BookName>
+                        <img src={imageBook} alt={search.name}></img>
                     </Book>
                 ))}
             </BookCase>

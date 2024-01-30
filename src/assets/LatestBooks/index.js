@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { livros } from "./database"
 import livroTwo from "../../imagens/livro2.png"
 import CardRecommend from '../Card'
+
 const Title = styled.h2`    
 color: #000;
 font-size: 36px;
