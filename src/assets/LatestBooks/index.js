@@ -34,8 +34,8 @@ function LatestBook() {
             <Title>Últimos Lançamentos.</Title>
             <LastUpdateConteiner>
                 {
-                    livros.map((l) => (
-                        <LastUpdateImage src={l.src} alt={l.name}></LastUpdateImage>
+                    livros.map((l, index) => (
+                        <LastUpdateImage src={l.src} key={index} alt={l.name}></LastUpdateImage>
                     ))
                 }
             </LastUpdateConteiner>

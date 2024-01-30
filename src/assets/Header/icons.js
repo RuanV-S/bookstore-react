@@ -18,9 +18,8 @@ cursor: pointer;
 function HeaderIcons() {
   return (
     <IconsesComponents>
-
-      {icones.map((img) => (
-       <Icone><img src={img} alt='icone'></img></Icone>
+      {icones.map((img, index) => ( 
+       <Icone key={index}><img src={img} alt='icone'></img></Icone>
       ))}
     </IconsesComponents>
 

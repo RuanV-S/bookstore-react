@@ -2,8 +2,7 @@
 import { useEffect, useState } from "react"
 import Input from "../Input/index"
 import styled from "styled-components"
-import { livros } from "../LatestBooks/database"
-//import { getBook } from "../../service/book"
+import { getBook } from "../../service/book"
 
 const SearchContainer = styled.section`
 text-align: center;
@@ -29,18 +28,23 @@ grid-template-columns: auto auto auto auto;
 const Book = styled.div`
    
 `
+
 const BookName = styled.p`
 font-size: 16px;   
 color: ${props => props.cor || '#A20' } // Utilizando props    
 `
 function Search() {
     const [textSearch, setTextSearch] = useState([])
-   // const [ books, setBooks] = useState([])
+   const [ books, setBooks] = useState([])
 
-    // useEffect(() => {
-    //    const booksInApi = getBook()
-    //    setBooks(booksInApi)
-    // }, [])
+    useEffect(() => {
+      fetchBooks()
+    }, [])
+
+    async function fetchBooks() {
+        const booksInApi = await getBook()        
+        setBooks(booksInApi)
+    }
 
     return (
         <SearchContainer>
@@ -49,16 +53,15 @@ function Search() {
             <Input placeholder="Escreva sua próxima leitura"
                 onBlur={ev => {
                     const userText = ev.target.value
-                    const resultSearch = livros.filter(books=> books.nome.includes(userText))
+                    const resultSearch = books.filter(book => book.name.toLocaleLowerCase().includes(userText))
                     setTextSearch(resultSearch)
                 }}
             />
             <BookCase>
-
                 {textSearch.map((search) => (
                     <Book>
-                        <BookName cor="#000">{search.nome}</BookName>
-                        <img src={search.src} alt={search.nome} onMouseEnter={() => console.log('Mouse por cima')}></img>
+                        <BookName cor="#000">{search.name}</BookName>
+                        <img src={search.src} alt={search.name} onMouseEnter={() => console.log('Mouse por cima')}></img>
                     </Book>
                 ))}
             </BookCase>

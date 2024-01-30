@@ -20,8 +20,8 @@ padding: 0 5px;
 function HeaderTextOptions() {
   return (
     <OptionsComponent>
-      {textOptions.map((txt) => (
-        <Link to={`/${txt.toLowerCase()}`} ><Option><p>{txt}</p></Option></Link>
+      {textOptions.map((txt, index) => (        
+        <Link to={`/${txt.toLowerCase()}`} key={index}><Option><p>{txt}</p></Option></Link>
         ))}
     </OptionsComponent>
   )
