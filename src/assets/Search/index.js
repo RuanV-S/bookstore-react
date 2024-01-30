@@ -35,7 +35,7 @@ color: ${props => props.cor || '#A20' } // Utilizando props
 `
 function Search() {
     const [textSearch, setTextSearch] = useState([])
-   const [ books, setBooks] = useState([])
+    const [ books, setBooks] = useState([])
 
     useEffect(() => {
       fetchBooks()

@@ -20,6 +20,6 @@ Ele agrupa corretamente o React no modo de produção e otimiza a compilação p
 Executa a aplicação no modo de desenvolvimento.
 Abra http://localhost:3000 para a visualizar no seu navegador.
 A página será recarregada quando você fizer alterações.
-Também poderá ver quaisquer erros no console.
+
 
 
