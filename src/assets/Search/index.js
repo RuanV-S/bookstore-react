@@ -56,7 +56,7 @@ function Search() {
             <SubTitle>Encontre seu livro em nossa estante</SubTitle>
             <Input placeholder="Escreva sua próxima leitura"
                 onKeyDownCapture={ev => {
-                    if (ev.key === 'Enter') {
+                    if (ev.key) {
                         const userText = ev.target.value.toLocaleLowerCase()
                         const resultSearch = books.filter(book => book.name.toLocaleLowerCase().includes(userText))
                         setTextSearch(resultSearch)
