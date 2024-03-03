@@ -6,6 +6,7 @@ import Header from '../src/assets/Header/index'
 import Home from './routes/Home';
 import Favorito from './routes/Favorito';
 const GlobalStyle = createGlobalStyle`
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

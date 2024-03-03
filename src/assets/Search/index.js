@@ -30,12 +30,13 @@ const Book = styled.div`
 cursor: pointer;
 margin-top: 10px;
 margin-right: 10px;
+
 `
 
 const BookName = styled.p`
 font-size: 16px;   
-color: ${props => props.cor || '#F2C240' } // Utilizando props    
-`
+color: ${props => props.cor || '#F2C240' } // Utilizando props  
+`  
 function Search() {
     const [textSearch, setTextSearch] = useState([])
     const [ books, setBooks] = useState([])
@@ -57,11 +58,14 @@ function Search() {
             <Title>Já sabe por onde começar?</Title>
             <SubTitle>Encontre seu livro em nossa estante</SubTitle>
             <Input placeholder="Escreva sua próxima leitura"
-                onKeyDown={ev => {
-                    const userText = ev.target.value
-                    const resultSearch = books.filter(book => book.name.toLocaleLowerCase().includes(userText.toLocaleLowerCase()))
-                    setTextSearch(resultSearch)
-                }}               
+
+                onKeyDown={ev => {               
+                        const userText = ev.target.value.toLocaleLowerCase()
+                        const resultSearch = books.filter(book => book.name.toLocaleLowerCase().includes(userText))
+                        setTextSearch(resultSearch)
+                    }
+                }
+                          
             />
             <BookCase>
                 {textSearch.map((search, index) => (              
