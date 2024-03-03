@@ -20,9 +20,6 @@ code {
     monospace;
 }
 
-li {
-  list-style: none;
-}
 
 `
 

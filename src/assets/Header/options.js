@@ -12,14 +12,13 @@ height: 100%;
 padding: 0 15px;
 cursor: pointer;
 text-align: center;
-
 `
 const Option = styled.li`
 display: flex;
 text-decoration: none;
 padding: 0 10px;
 text-decoration: none;
-  color: black;
+color: black;
 `
 function HeaderTextOptions() {
   return (

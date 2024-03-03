@@ -6,6 +6,8 @@ import HeaderTextOptions from './options.js';
 import { Link } from 'react-router-dom';
 
 const HeaderContainer = styled.header`
+max-width: 100%;
+max-height: 10%;
 background-color: #a9a9a9;
 display: flex;
 justify-content: center;

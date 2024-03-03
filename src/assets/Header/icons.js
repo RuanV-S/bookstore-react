@@ -6,7 +6,6 @@ const icones = [sacola, perfil]
 
 const IconsesComponents = styled.ul`
   display: flex;   
-    text-decoration: underline;
 `
 
 const Icone = styled.li`

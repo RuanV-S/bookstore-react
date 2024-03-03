@@ -4,15 +4,16 @@ import styled from "styled-components"
 const Card = styled.div`
 align-items: center;
 text-align: center;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
-border-radius: 10px;
 display: column;
-margin: 0 auto;
 max-width: 200px;
 margin-top: 50px;
-margin-bottom:: 50px;
 padding: 55px 50px;
-justify-content: center; 
+justify-content: center; ]
+transition: transform 0.3s ease-in-out;
+&:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+}
 `
 
 const Button = styled.button`
@@ -28,10 +29,11 @@ background-color: transparent;
     justify-content: center;
     &:hover {
         cursor: pointer;
+        background-color: #FFF;
+        color: #000;
     }
 `
 const SubTitle = styled.h4`
-
 color: #ff0000;
 font-size: 18px;
 font-weight: bold;
@@ -49,7 +51,6 @@ background-color: #2B2300;
 `
 
 const Title = styled.h3`
-
 width: 100%;
 height: 150px
 padding: 500px 0;

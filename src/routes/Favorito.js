@@ -3,10 +3,9 @@ import styled from "styled-components";
 import { deleteBookmarks, getBookmarks } from "../service/bookmarks";
 import ImgBook from "../imagens/livro.png";
 const AppContainer = styled.div`
-min-height: 100vh;
-width: 100%;
 background-image: linear-gradient(90deg, #35414b 45%, #8cc4a8);
 `;
+
 const ResultContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -15,9 +14,8 @@ const ResultContainer = styled.div`
 const Title = styled.h2`
   color: #fff;
   font-size: 36px;
-  text-align: center;
-  width: 100%;
-  padding-top: 35px;
+  text-align: center; 
+  padding-top: 30px;
 `;
 
 const Result = styled.div`

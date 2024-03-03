@@ -21,5 +21,5 @@ Executa a aplicação no modo de desenvolvimento.
 Abra http://localhost:3000 para a visualizar no seu navegador.
 A página será recarregada quando você fizer alterações.
 
-
-
+`Necessario iniciar a api para funcionamento completo.`
+Encontre a api em [BookStore API](https://github.com/RuanV-S/bookstore-api)

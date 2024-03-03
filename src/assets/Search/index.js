@@ -27,12 +27,14 @@ grid-template-columns: auto auto auto auto;
 
 `
 const Book = styled.div`
-   
+cursor: pointer;
+margin-top: 10px;
+margin-right: 10px;
 `
 
 const BookName = styled.p`
 font-size: 16px;   
-color: ${props => props.cor || '#A20' } // Utilizando props    
+color: ${props => props.cor || '#F2C240' } // Utilizando props    
 `
 function Search() {
     const [textSearch, setTextSearch] = useState([])
@@ -55,11 +57,11 @@ function Search() {
             <Title>Já sabe por onde começar?</Title>
             <SubTitle>Encontre seu livro em nossa estante</SubTitle>
             <Input placeholder="Escreva sua próxima leitura"
-                onBlur={ev => {
+                onKeyDown={ev => {
                     const userText = ev.target.value
-                    const resultSearch = books.filter(book => book.name.toLocaleLowerCase().includes(userText))
+                    const resultSearch = books.filter(book => book.name.toLocaleLowerCase().includes(userText.toLocaleLowerCase()))
                     setTextSearch(resultSearch)
-                }}
+                }}               
             />
             <BookCase>
                 {textSearch.map((search, index) => (              
