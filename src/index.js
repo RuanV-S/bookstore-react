@@ -15,14 +15,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-
-`
+}`
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

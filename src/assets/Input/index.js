@@ -10,7 +10,6 @@ width: 200px;
 color: #FFF;
 font-size: 16px;
 margin-bottom: 10px;
-
 &::placeholder {
 color: #000;
 font-size: 16px;

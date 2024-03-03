@@ -30,7 +30,6 @@ const Book = styled.div`
 cursor: pointer;
 margin-top: 10px;
 margin-right: 10px;
-
 `
 
 const BookName = styled.p`
@@ -75,7 +74,6 @@ function Search() {
                     </Book>
                 ))}
             </BookCase>
-
         </SearchContainer>
     )
 }
